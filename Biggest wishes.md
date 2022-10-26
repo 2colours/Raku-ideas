@@ -7,6 +7,9 @@ Modules:
 	- Red as a reference of Raku
 	- we have some momentum with ML
 	- Leon's idea is worth considering: GIR
+- the old ecosystem (and modules site) used to be a social place - let's try to keep the good parts
+	- https://github.com/Raku/ecosystem/blob/main/ADOPT-ME.md
+	- let's try to reach out to authors
 
 LSP!
 - RakuNavigator by bscan: let's help him!

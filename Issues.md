@@ -7,3 +7,4 @@
 5. .& detachment
 	1. why is it not detachable in the first place?
 	2. why does `'asd'  .comb.&dd` count as detached? Surely it couldn't be more attached to the `.comb` part?
+6. `zef --help` writes to stderr
