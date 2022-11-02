@@ -57,3 +57,7 @@ Language and implementation:
 - up-to-date JVM and JS backend would be welcome
 - standalone executable would be welcome
 - better Windows support (hate to say it...)
+- profiler
+  - an up-to-date viewer is needed
+  - https://github.com/tadzik/p6profiler-qt
+  - https://github.com/timo/moarperf
