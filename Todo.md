@@ -1,0 +1,10 @@
+- https://github.com/Leont/getopt-long6/issues/13
+- https://github.com/Altai-man/docs.raku.org/issues/79
+- https://github.com/Altai-man/docs.raku.org/issues/72
+- https://github.com/Altai-man/docs.raku.org/issues/31
+- watch https://www.youtube.com/watch?v=NYBc3tQEIh4
+- **(BIG)** Raku discord bot
+	- music bot???
+- **(BIG)** Raku desktop app (with Electron or GTK)
+- https://github.com/2colours/HTML-Tag/issues/2
+- https://github.com/2colours/HTML-Tag/issues/1
