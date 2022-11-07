@@ -1,5 +1,8 @@
 - https://github.com/Leont/getopt-long6/issues/13
 - https://github.com/Altai-man/docs.raku.org/issues/79
+	- ugly catcomplete jQuery code -> what else to use?
+	- https://codepen.io/trevoreyre/pen/JjGxLEm
+	- https://jsuites.net/v4/dropdown-and-autocomplete
 - https://github.com/Altai-man/docs.raku.org/issues/72
 - https://github.com/Altai-man/docs.raku.org/issues/31
 - watch https://www.youtube.com/watch?v=NYBc3tQEIh4
@@ -8,3 +11,9 @@
 - **(BIG)** Raku desktop app (with Electron or GTK)
 - https://github.com/2colours/HTML-Tag/issues/2
 - https://github.com/2colours/HTML-Tag/issues/1
+- docker run -v c:/Users/bruce:/mnt/me --rm -it jjmerelo/alpine-raku:2020.01 /mnt/me/bb02_c6.raku
+- Ddt:
+	- description generation should be POD6 based, not just a regex
+	- generate resources part of META6 from the content of the folder
+	- fix 'provides' generation
+		- to-module is too optimistic

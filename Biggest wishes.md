@@ -53,6 +53,11 @@ Content and communication:
 	- some really-really good materials about containers in Raku would be essential
 
 Language and implementation:
+- design and specification
+	- https://design.raku.org/ stuff is definitely outdated
+		- still useful for documentation! loads of details
+	- Raku should not become Rakudo as-it-is
+	- "undefined behavior" is also undesirable imo
 - 6.e is being discussed by RSC
 - up-to-date JVM and JS backend would be welcome
 - standalone executable would be welcome
