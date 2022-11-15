@@ -17,7 +17,7 @@
 	- alas, the current behavior is documented: https://docs.raku.org/language/regexes#Substitution -> I propose the adoption as well
 		- either deleting the note plain and simple
 		- or also adding that it works like `$foo ~~ /regex/`, setting $/
-8. `sub demo(|c, :$name) { say c; say $name; }; demo(1);`
+8. **(OPENED)** `sub demo(|c, :$name) { say c; say $name; }; demo(1);`
 	- "expected 1 positional but got 1" WTF?
 	- seems like it actually expects no positionals at all
 	- how does this work?
