@@ -17,3 +17,5 @@
 	- generate resources part of META6 from the content of the folder
 	- fix 'provides' generation
 		- to-module is too optimistic
+- https://github.com/Raku/raku.org/issues/174
+- port for Text::Extract::Word of Perl5

@@ -8,8 +8,10 @@ Modules:
 	- we have some momentum with ML
 	- Leon's idea is worth considering: GIR
 	- MUGS - what's the state of it?
+- https://github.com/Raku/raku-most-wanted/blob/master/most-wanted/README-wanted.md
 - the old ecosystem (and modules site) used to be a social place - let's try to keep the good parts
 	- https://github.com/Raku/ecosystem/blob/main/ADOPT-ME.md
+	- https://github.com/Raku/ecosystem-unbitrot
 	- let's try to reach out to authors
 
 LSP!
@@ -22,6 +24,7 @@ Content and communication:
 		- different domain name?
 	- even if there are no new books, this should be a top-level management category for the best possible representation
 - revive Richard's Citation Index:
+	- https://github.com/finanalyst/p6-task-popular is the original module
 	- Ecosystem module by Liz++
 		- release-date already present in the meta folder in REA - let's retrieve it?
 	- can we go back in time? retrospectively filling the graph
