@@ -21,7 +21,7 @@
 	- "expected 1 positional but got 1" WTF?
 	- seems like it actually expects no positionals at all
 	- how does this work?
-9. `().min == Inf && ().max == -Inf` ?
+9. **(OPENED)** `().min == Inf && ().max == -Inf` ?
 10. `ACCEPTS(Match:D:)` is a hack
 	- confer "smartmatch to S/// _is_ useful and it _does_ work" issue
 	- in order to support s/// and m// (perhaps tr/// as well?), smartmatching to a match object always returns the match object
