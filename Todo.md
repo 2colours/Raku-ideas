@@ -9,6 +9,7 @@
 - **(BIG)** Raku discord bot
 	- music bot???
 - **(BIG)** Raku desktop app (with Electron or GTK)
+- **(BIG)** migrate modules.raku.org to Raku (currently Perl 5 + Mojolicious framework)
 - https://github.com/2colours/HTML-Tag/issues/2
 - https://github.com/2colours/HTML-Tag/issues/1
 - docker run -v c:/Users/bruce:/mnt/me --rm -it jjmerelo/alpine-raku:2020.01 /mnt/me/bb02_c6.raku
@@ -18,4 +19,5 @@
 	- fix 'provides' generation
 		- to-module is too optimistic
 - https://github.com/Raku/raku.org/issues/174
+	- https://github.com/raku-community-modules/Web-Template
 - port for Text::Extract::Word of Perl5
