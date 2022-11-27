@@ -20,4 +20,5 @@
 		- to-module is too optimistic
 - https://github.com/Raku/raku.org/issues/174
 	- https://github.com/raku-community-modules/Web-Template
+		- https://github.com/raku-community-modules/Web-Template/issues/5
 - port for Text::Extract::Word of Perl5
