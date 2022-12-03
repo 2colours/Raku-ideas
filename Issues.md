@@ -38,3 +38,4 @@
 			- maybe referring to `&&` and `||` (short-circuiting) can help
 		- hard to implement?
 			- does it contribute to the Rakudo-as-Raku merger of implementation and specification?
+12. `$<a b>` should behave like `$[0, 1]`
