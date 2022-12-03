@@ -4,3 +4,4 @@ Questions:
 - what are separate metaobjects created for?
   - seemingly type objects, i.e $foo.HOW === $foo.WHAT.HOW?
 - in what scope are top-level lexical variables installed? GLOBAL, PROCESS, none, etc.
+  - "my" variables aren't included, what about "our" variables?
