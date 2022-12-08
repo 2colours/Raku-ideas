@@ -1,6 +1,6 @@
 - https://github.com/Leont/getopt-long6/issues/13
-- https://github.com/Altai-man/docs.raku.org/issues/79
-	- ugly catcomplete jQuery code -> what else to use?
+- **(STALLED)** https://github.com/Altai-man/docs.raku.org/issues/79
+	- CIAvash reworked it; I'm not fully content but it may turn out to be good
 	- https://codepen.io/trevoreyre/pen/JjGxLEm
 	- https://jsuites.net/v4/dropdown-and-autocomplete
 - https://github.com/Altai-man/docs.raku.org/issues/72
@@ -22,3 +22,4 @@
 	- https://github.com/raku-community-modules/Web-Template
 		- https://github.com/raku-community-modules/Web-Template/issues/5
 - port for Text::Extract::Word of Perl5
+- Coffeescript to JS migration of https://github.com/Raku/atom-language-perl6
