@@ -38,4 +38,16 @@
 			- maybe referring to `&&` and `||` (short-circuiting) can help
 		- hard to implement?
 			- does it contribute to the Rakudo-as-Raku merger of implementation and specification?
-12. `$<a b>` should behave like `$[0, 1]`
+12. `my Int &var` things:
+	- valid, designed concept backed up by `Callable[::T]` - need to be documented
+	- `Callable[::T]` itself needs to be documented: based on the declared return value of the Callable instance
+	- The sole fact that Callable can be parameterized and what that does, needs to be documented.
+	-  `my Int &var = -> --> Int { 6 }` fails; this is probably a bug, file a Rakudo issue for this. 
+	- `my Int &var` defaults to unparameterized Callable which is bogus typing and my first bet would be that it's also a bug - file a Rakudo issue for it. `Callable[Int]` should be sufficient for a default value.
+13. `Nil` and `min` / `max`:
+	- `Nil` acts
+		- as 0 for numbers
+		- as the string `"Nil"` for strings
+		- as `(0, )` (???) for lists
+	- needs consistent semantics, possibly error
+14. `$<a b>` should behave like `$[0, 1]`

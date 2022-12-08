@@ -22,4 +22,9 @@
 	- https://github.com/raku-community-modules/Web-Template
 		- https://github.com/raku-community-modules/Web-Template/issues/5
 - port for Text::Extract::Word of Perl5
+	- tbrowder likes the idea but would want a different name with MSWord in it
+	- first: demo with Inline::Perl5?
+	- then
+		- adopt the OLE module of Jeff Goff (R.I.P)
+		- actually port the code of the Perl5 module depending on it
 - Coffeescript to JS migration of https://github.com/Raku/atom-language-perl6
