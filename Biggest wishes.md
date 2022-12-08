@@ -16,6 +16,9 @@ Modules:
 
 LSP!
 - RakuNavigator by bscan: let's help him!
+- repurpose https://github.com/Raku/atom-language-perl6 as a general grammar repository
+  - Github/Linguist tracks it
+  - maybe VSC also well, bscan++
 
 Content and communication:
 - books
