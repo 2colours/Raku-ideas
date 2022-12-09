@@ -3,7 +3,7 @@
 	- CIAvash reworked it; I'm not fully content but it may turn out to be good
 	- https://codepen.io/trevoreyre/pen/JjGxLEm
 	- https://jsuites.net/v4/dropdown-and-autocomplete
-- https://github.com/Altai-man/docs.raku.org/issues/72
+- **(FINISHED)** https://github.com/Altai-man/docs.raku.org/issues/72
 - https://github.com/Altai-man/docs.raku.org/issues/31
 - **(FINISHED)** watch https://www.youtube.com/watch?v=NYBc3tQEIh4
 - **(BIG)** Raku discord bot
