@@ -28,3 +28,5 @@
 		- adopt the OLE module of Jeff Goff (R.I.P)
 		- actually port the code of the Perl5 module depending on it
 - Coffeescript to JS migration of https://github.com/Raku/atom-language-perl6
+- Tatoeba API wrapper in Raku
+  - https://github.com/Tatoeba/tatoeba2/issues/2669
