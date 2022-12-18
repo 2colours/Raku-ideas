@@ -36,7 +36,7 @@ Let's start with values:
 			- there is ValueList and ValueMap :)
 		- Setty types: Set, Bag
 
-Terms:
+Sigilless symbols:
 - declared with \
 	- disclaimer: among other things - note to self: needs a better name
 - referenced without any prefix(=sigil)

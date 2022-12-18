@@ -51,3 +51,16 @@
 		- as `(0, )` (???) for lists
 	- needs consistent semantics, possibly error
 14. `$<a b>` should behave like `$[0, 1]`
+15. **(OPENED)** Handling of non-breaking spaces when splitting to words
+	- https://docs.raku.org/language/traps#___top "using Set subroutines (...)" part
+		- it produces `"a b"` and returns `False` for both code examples
+		- ... for all bisectable6 versions
+	- https://docs.raku.org/language/quoting#index-entry-quote_%3C%3C_%3E%3E-quote_%C2%AB_%C2%BB-Word_quoting_with_interpolation_and_quote_protection:_%C2%AB_%C2%BB
+		- seems to work the same way as `<<>>` but that way also doesn't match the output in the docs: `("42 b", "c ")`
+	- reason: non-breaking space!
+	- https://docs.raku.org/language/quoting#Word_quoting:_qw says:
+	  
+	  > The `:w` form, usually written as `qw`, splits the string into "words". In this context, words are defined as sequences of non-whitespace characters separated by whitespace.  
+
+	- [words](https://docs.raku.org/routine/words) does seem to match this description and produce the supposed output with non-breaking spaces as well
+	- both can make sense but which one is correct?
