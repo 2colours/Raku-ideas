@@ -6,3 +6,4 @@ Questions:
 - in what scope are top-level lexical variables installed? GLOBAL, PROCESS, none, etc.
   - "my" variables aren't included, what about "our" variables?
 - how to access a method (especially inherited method) as a symbol?
+- what replaces World.nqp in the RakuAST implementation
