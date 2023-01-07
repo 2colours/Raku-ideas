@@ -7,3 +7,4 @@ Questions:
   - "my" variables aren't included, what about "our" variables?
 - how to access a method (especially inherited method) as a symbol?
 - what replaces World.nqp in the RakuAST implementation
+- what is the difference between `local` and `lexical` (scope)?
