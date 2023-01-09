@@ -70,7 +70,7 @@ Means to facilitate and stimulate activity:
 	- perhaps cannot be enforced - it's all up to user demand
 	- let's try to bring people with similar interests together
 	- shared ownership of content could also be considered
-- Bitrot reborn (this should be a link :P)
+- [[Squashathon reborn]]
 
 Language and implementation:
 - design and specification
