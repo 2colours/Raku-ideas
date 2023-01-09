@@ -6,3 +6,7 @@ Questions:
 - in what scope are top-level lexical variables installed? GLOBAL, PROCESS, none, etc.
   - "my" variables aren't included, what about "our" variables?
 - how to access a method (especially inherited method) as a symbol?
+- what replaces World.nqp in the RakuAST implementation
+  - answer: there won't be one monolith; there will be different helper classes for different functions World.nqp used to provide
+- what is the difference between `local` and `lexical` (scope)?
+  - answer: `local`s exist only in the given block, not in inner blocks - this is a manner of optimization, no need to expose them in any way apart from their own block
