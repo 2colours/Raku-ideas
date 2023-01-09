@@ -48,15 +48,29 @@ Content and communication:
 				- advertise continuous development
 				- compatibility guarantees
 				- documentation guarantees?
+- modules.raku.org
+	- favor raku.land FOR NOW
+	- in the long run, migrate to Cro, inspiration can be taken from raku.land
 - docs.raku.org
 	- new site by Altai-man?
 	- known issues of keeping content up-to-date
 - the Weeklies are good - make them louder
+	- same for the weekly challenges
 - "fan-made", unofficial content needs to be appreciated
 	- part of the story: Raku CCR project - good idea, let's take it seriously
+	- bring weekly challenge reviews back? Maybe Bruce has an idea
 - tutorials
 	- "first language Raku" series? [[First language Raku tutorial]]
 	- some really-really good materials about containers in Raku would be essential
+
+Means to facilitate and stimulate activity:
+- Raku as a great academic-yet-pragmatic learning opportunity for students
+- "working groups"
+	- Like [Raku noise gang](http://raku.noisegang.com/)
+	- perhaps cannot be enforced - it's all up to user demand
+	- let's try to bring people with similar interests together
+	- shared ownership of content could also be considered
+- Bitrot reborn (this should be a link :P)
 
 Language and implementation:
 - design and specification
@@ -67,7 +81,15 @@ Language and implementation:
 - 6.e is being discussed by RSC
 - up-to-date JVM and JS backend would be welcome
 - standalone executable would be welcome
-- better Windows support (hate to say it...)
+- better Windows AND Mac support (hate to say it...)
+- ecosystem logic
+	- modules (unit of dependency) versus distributions (unit of publishing)
+	- the situation needs to get clearer
+		- either make distributions the unit of dependency
+		- or raise awareness of this "Perlish" situation with the following measures
+			- disadvising namespace-looking distribution names
+			- better ecosystem support for per-module actions
+			- better site support for module lookup
 - profiler
   - an up-to-date viewer is needed
   - https://github.com/tadzik/p6profiler-qt
