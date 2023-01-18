@@ -6,3 +6,6 @@
 	- the latter clearly coerces to `List`
 	- what does the former do?
 	- how does it relate to `cache`?
+3. What is the `Instance.Class::method` syntax
+	- it looks like lookup but it only seems to work for calls
+	- `Instance.Class::` itself is invalid

@@ -30,3 +30,12 @@
 - Coffeescript to JS migration of https://github.com/Raku/atom-language-perl6
 - Tatoeba API wrapper in Raku
   - https://github.com/Tatoeba/tatoeba2/issues/2669
+- add tests
+	- to Roast
+	- https://github.com/doomvox/darkroast
+- RakuAST stuff
+	- quotes: `m//`, `s// = 'blah'` (??), `tr///` kind of stuff
+	- `&variables`
+		- https://discord.com/channels/538407879980482560/633753335119478795/1057862136572956714
+		  "note to self: PRODUCE-META-OBJECT, container descriptors"
+	  - conversion "functions" like `Bool('almafa')`

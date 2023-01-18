@@ -64,5 +64,28 @@
 
 	- [words](https://docs.raku.org/routine/words) does seem to match this description and produce the supposed output with non-breaking spaces as well
 	- both can make sense but which one is correct?
-16. `Target(SourceSubset)` evaluation order
+16. `Bool(function-returning-native-int)` regression:
+	 - bisects to this: https://github.com/rakudo/rakudo/commit/6bd955e6ea131dee6794256f5bf0da8018c3e095
+	 - tldr the return value was boxed; it turned unboxed but not quite enough to work
+ 17. assignment of native types:
+	 - a native `int` cannot be assigned using a string literal, even if that string literal contains an integer
+	 - a native `int` is perfectly content with a native `str` variable on the right handside: voluntaristic integer parsing will happen; even complete nonsense can give a 0 return value
+18. parsing of "unary `&`"
+	- `say &5` yields `(Any)` with RakuAST frontend and `Nil` with legacy frontend
+	- `say &(5)` yields 5 for both, RakuAST frontend sees it as an item contextualizer
+19. `utf` buffers and `Stringy`
+	- `utf8` and the likes are `Stringy`
+	- expectation: their `Stringy` method will return them
+	- reality: their `Stringy` method _upgrades_ to `Str`
+	- is there a practical reason? can it be changed?
+20. support for `&infix:<~^>` on various `Blob`s
+	- in theory, all `Blob`s can support this operator
+	- in practice, `utf` buffers upgrade to `Str`, see 19.
+	- if there is one item, `Stringy` is called which doesn't work for most `Blob` types
+	- if there are no items, the default value is the empty string that won't work well with `Blob` types (probably with any non-`Str` types)
+21. `SignedBlob` and `UnsignedBlob` publicity
+	- should they remain implementation details?
+		- if yes, can we gist them in a way that points it out?
+	- if no: document them, spec them
+22. `Target(SourceSubset)` evaluation order
 	- seems that the coercion happens _before_ any checks (for the subset) would be performed?
