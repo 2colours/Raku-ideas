@@ -64,3 +64,5 @@
 
 	- [words](https://docs.raku.org/routine/words) does seem to match this description and produce the supposed output with non-breaking spaces as well
 	- both can make sense but which one is correct?
+16. `Target(SourceSubset)` evaluation order
+	- seems that the coercion happens _before_ any checks (for the subset) would be performed?
