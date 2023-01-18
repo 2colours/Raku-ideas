@@ -1,0 +1,23 @@
+- who are the infrastructure team and how can one address them?
+- is there a way to join the infrastructure team? if so, how?
+- what are the tasks and/or responsibilites of members?
+- is the infrastructure team backed up by TRF?
+- is there a rough estimation of resources that
+	- the community can spend "officially"
+	- infrastructure-controlled things take up at the moment
+- what domains are owned/handled by the community?
+- what is the workflow for changing and deploying raku.org and related sites?
+	- the to-be doc site
+	- modules.raku.org
+- where can the following types of issues be addressed?
+	- domain choices
+	- content/code of websites
+	- new services
+	  again, example: how do "we" relate to raku.land at the moment? are there any plans, and if there were, how could that be handled?
+- how does it relate to communication channels? Does the team have special relevance for Raku's
+	- Twitter
+	- Reddit
+	- IRC channels
+	- Discord
+	- (whatever I'm forgetting, you get the idea)
+	  Example: if there is technical involvement for communication channels (e.g a bot for one of the listed platforms), does the infrastructure team have anything to do with that?
