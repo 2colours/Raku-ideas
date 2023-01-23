@@ -53,6 +53,8 @@ Content and communication:
 	- in the long run, migrate to Cro, inspiration can be taken from raku.land
 - docs.raku.org
 	- new site by Altai-man?
+		- the final call seems to be: similar look, Richard's Collection backend
+		- https://github.com/Raku/doc-website
 	- known issues of keeping content up-to-date
 - the Weeklies are good - make them louder
 	- same for the weekly challenges
