@@ -7,7 +7,11 @@ Modules:
 	- Red as a reference of Raku
 	- we have some momentum with ML
 	- Leon's idea is worth considering: GIR
-	- MUGS - what's the state of it?
+	- Terminal fun
+		- lessons to learn from https://gist.github.com/0racle/9852f5903879addbcaa7666375c04840
+			- Terminal::Print module could be more maintained
+			- NCurses/PDCurses for better multiplatform support
+		- MUGS - what's the state of it?
 - https://github.com/Raku/raku-most-wanted/blob/master/most-wanted/README-wanted.md
 - the old ecosystem (and modules site) used to be a social place - let's try to keep the good parts
 	- https://github.com/Raku/ecosystem/blob/main/ADOPT-ME.md
