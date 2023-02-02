@@ -1,4 +1,4 @@
-Modules:
+Modules/Products:
 - convenience
 	- mi6 as a reference of Raku
 	- Getopt::Long is more than welcome - standardization?
@@ -7,6 +7,8 @@ Modules:
 	- Red as a reference of Raku
 	- we have some momentum with ML
 	- Leon's idea is worth considering: GIR
+	- SpitSH is an outstanding idea, don't let it be wasted!
+		- https://github.com/spitsh/spitsh
 	- Terminal fun
 		- lessons to learn from https://gist.github.com/0racle/9852f5903879addbcaa7666375c04840
 			- Terminal::Print module could be more maintained
