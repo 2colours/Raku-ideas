@@ -88,4 +88,9 @@
 		- if yes, can we gist them in a way that points it out?
 	- if no: document them, spec them
 22. `Target(SourceSubset)` evaluation order
-	- seems that the coercion happens _before_ any checks (for the subset) would be performed?
+	- ~~seems that the coercion happens _before_ any checks (for the subset) would be performed?~~
+	- correction: multi dispatch tries the source type object if there isn't a `:D` constraint - according to vrurg, this is an optimizer bug
+23. apparently all roles are `Cool`
+	- tested with smartmatch
+	- the underlying NQP op reports the same
+	- https://github.com/rakudo/rakudo/commit/0035ddb46de48be17492c4a11be3d4070b30077f deliberately introduced it but why for `Cool`?

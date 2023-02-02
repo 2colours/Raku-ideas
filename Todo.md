@@ -1,10 +1,12 @@
 - https://github.com/Leont/getopt-long6/issues/13
 - **(STALLED)** https://github.com/Altai-man/docs.raku.org/issues/79
 	- CIAvash reworked it; I'm not fully content but it may turn out to be good
+		- migrated as https://github.com/Raku/doc-website/issues/30
 	- https://codepen.io/trevoreyre/pen/JjGxLEm
 	- https://jsuites.net/v4/dropdown-and-autocomplete
 - **(FINISHED)** https://github.com/Altai-man/docs.raku.org/issues/72
-- https://github.com/Altai-man/docs.raku.org/issues/31
+- **(STALLED)** https://github.com/Altai-man/docs.raku.org/issues/31
+	- how does it relate to https://github.com/Raku/doc-website?
 - **(FINISHED)** watch https://www.youtube.com/watch?v=NYBc3tQEIh4
 - **(BIG)** Raku discord bot
 	- music bot???
@@ -20,7 +22,7 @@
 		- to-module is too optimistic
 - https://github.com/Raku/raku.org/issues/174
 	- https://github.com/raku-community-modules/Web-Template
-		- https://github.com/raku-community-modules/Web-Template/issues/5
+		- **(FINISHED)** https://github.com/raku-community-modules/Web-Template/issues/5
 - port for Text::Extract::Word of Perl5
 	- tbrowder likes the idea but would want a different name with MSWord in it
 	- first: demo with Inline::Perl5?
