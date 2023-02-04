@@ -41,5 +41,7 @@
 		- https://discord.com/channels/538407879980482560/633753335119478795/1057862136572956714
 		  "note to self: PRODUCE-META-OBJECT, container descriptors"
 	  - conversion "functions" like `Bool('almafa')`
-  - https://github.com/pierre-vigier/Perl6-Data-MessagePack
+  - **(FINISHED)** https://github.com/pierre-vigier/Perl6-Data-MessagePack
 	  - added to calendar: 4th february
+  - clearup of storage of `Map` implementations
+	  - https://github.com/rakudo/rakudo/pull/5182
