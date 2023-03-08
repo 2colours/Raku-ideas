@@ -50,3 +50,7 @@
 	  - it often generates really bad lines
 		  - on unnamed data
 		  - on items in a composite data structure
+  - solidifying Fez
+	  - more tests
+		  - perhaps with mocked backend?
+	  - more documentation
