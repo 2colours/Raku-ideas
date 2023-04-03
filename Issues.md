@@ -87,10 +87,26 @@
 	- should they remain implementation details?
 		- if yes, can we gist them in a way that points it out?
 	- if no: document them, spec them
-22. `Target(SourceSubset)` evaluation order
+22. **(OPENED)** `Target(SourceSubset)` evaluation order
 	- ~~seems that the coercion happens _before_ any checks (for the subset) would be performed?~~
 	- correction: multi dispatch tries the source type object if there isn't a `:D` constraint - according to vrurg, this is an optimizer bug
 23. apparently all roles are `Cool`
 	- tested with smartmatch
 	- the underlying NQP op reports the same
 	- https://github.com/rakudo/rakudo/commit/0035ddb46de48be17492c4a11be3d4070b30077f deliberately introduced it but why for `Cool`?
+24. dependency management doesn't make a lot of sense at the moment
+	- the unit of a dependency is a module
+	- the unit of sharing code in a managed manner is a distribution
+	- a distribution can contain any number of modules and it's identified with metadata
+	- the metadata of a module is not taken into account while installation
+	- this leads to the bizarre situation that a module cannot be properly identified without knowing the distribution
+	- different motives for creating a distribution:
+		- install scripts -> won't be depended upon but needs to be installable via dist id
+		- release some modules with tightly coupled code -> perhaps there is no point in pretending that one only depends on the module when the rest of the dist could not be separated
+		- bundling modules for more convenient sharing -> it would make sense to actually allow independent metadata for the modules
+	- in any case - it doesn't seem reasonable to make dependencies a combo of module metadata (name) and dist metadata (auth, version, etc.)
+25. `token`s and capture groups
+	- `my token inQuote { \' .*? \' }; say "'Hello World'" ~~ / <inQuote> /` matches
+	- `my token inQuote   {  \' <(.*?)> \' }; say "'Hello World'" ~~ / <inQuote> /` (mind the match delimeters) also matches
+	- `my token inQuote { \' (.*?) \' }; say "'Hello World'" ~~ / <inQuote> /` (mind the positional capture instead of the match delimeters) doesn't match!
+	- why? is this intended or a bug?
