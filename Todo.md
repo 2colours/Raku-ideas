@@ -43,5 +43,14 @@
 	  - conversion "functions" like `Bool('almafa')`
   - **(FINISHED)** https://github.com/pierre-vigier/Perl6-Data-MessagePack
 	  - added to calendar: 4th february
+	  - still doesn't show up on the site :(
   - clearup of storage of `Map` implementations
 	  - https://github.com/rakudo/rakudo/pull/5182
+  - `dd` sub cleanup
+	  - it often generates really bad lines
+		  - on unnamed data
+		  - on items in a composite data structure
+  - solidifying Fez
+	  - more tests
+		  - perhaps with mocked backend?
+	  - more documentation
