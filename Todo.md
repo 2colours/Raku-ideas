@@ -9,6 +9,7 @@
 	- how does it relate to https://github.com/Raku/doc-website?
 - **(FINISHED)** watch https://www.youtube.com/watch?v=NYBc3tQEIh4
 - **(BIG)** Raku discord bot
+	- port Bojler from Python (private link incoming: https://bitbucket.org/2colours/boggler-bot/src/master/)
 	- music bot???
 - **(BIG)** Raku desktop app (with Electron or GTK)
 - **(BIG)** migrate modules.raku.org to Raku (currently Perl 5 + Mojolicious framework)
