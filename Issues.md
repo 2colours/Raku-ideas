@@ -113,3 +113,7 @@
 26. `my Real() $demo = 'almafa'` throws, yet `'almafa' ~~ Real()` succeeds
 	- seems to work with a great variety of type checks, possibly all coercion types where the source type is okay
 	- given example bisects to https://github.com/rakudo/rakudo/commit/f2d73287f95ad6fa9eba8856ad15f3e8f9076d6e
+27. a `Pair` value cannot be bound to a positional in a subsignature
+	- `my $default = 12 => 34; my :($pair) := ($default,)` will fail: `Too few positionals passed to '<unit>'; expected 1 argument but got 0`
+	- succeeds with non-`Pairs`
+	- even binding the right handside to a `Slip` won't help
