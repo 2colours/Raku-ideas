@@ -110,3 +110,6 @@
 	- `my token inQuote   {  \' <(.*?)> \' }; say "'Hello World'" ~~ / <inQuote> /` (mind the match delimeters) also matches
 	- `my token inQuote { \' (.*?) \' }; say "'Hello World'" ~~ / <inQuote> /` (mind the positional capture instead of the match delimeters) doesn't match!
 	- why? is this intended or a bug?
+26. `my Real() $demo = 'almafa'` throws, yet `'almafa' ~~ Real()` succeeds
+	- seems to work with a great variety of type checks, possibly all coercion types where the source type is okay
+	- given example bisects to https://github.com/rakudo/rakudo/commit/f2d73287f95ad6fa9eba8856ad15f3e8f9076d6e
