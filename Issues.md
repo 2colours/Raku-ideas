@@ -117,6 +117,7 @@
 	- `my $default = 12 => 34; my :($pair) := ($default,)` will fail: `Too few positionals passed to '<unit>'; expected 1 argument but got 0`
 	- succeeds with non-`Pairs`
 	- even binding the right handside to a `Slip` won't help
+ 	- possibly related to https://github.com/rakudo/rakudo/issues/4534
 28. `say: "d", 5` - why is that a `Label`?
 	- reading both https://docs.raku.org/language/control#LABELs and especially https://docs.raku.org/type/Label, it seems that `Label`s are only for loops
  	- yet the parsing shows that we created a perfect label for an expression
