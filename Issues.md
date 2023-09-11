@@ -105,7 +105,7 @@
 		- release some modules with tightly coupled code -> perhaps there is no point in pretending that one only depends on the module when the rest of the dist could not be separated
 		- bundling modules for more convenient sharing -> it would make sense to actually allow independent metadata for the modules
 	- in any case - it doesn't seem reasonable to make dependencies a combo of module metadata (name) and dist metadata (auth, version, etc.)
-25. `token`s and capture groups
+25. **(OPENED)** `token`s and capture groups
 	- `my token inQuote { \' .*? \' }; say "'Hello World'" ~~ / <inQuote> /` matches
 	- `my token inQuote   {  \' <(.*?)> \' }; say "'Hello World'" ~~ / <inQuote> /` (mind the match delimeters) also matches
 	- `my token inQuote { \' (.*?) \' }; say "'Hello World'" ~~ / <inQuote> /` (mind the positional capture instead of the match delimeters) doesn't match!
