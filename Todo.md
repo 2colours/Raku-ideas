@@ -30,9 +30,11 @@
 	- then
 		- adopt the OLE module of Jeff Goff (R.I.P)
 		- actually port the code of the Perl5 module depending on it
-- Coffeescript to JS migration of https://github.com/Raku/atom-language-perl6
+- **(FINISHED)** Coffeescript to JS migration of https://github.com/Raku/atom-language-perl6
+	- the workflow has also been changed: the raku files under `dev/` are the input
 - Tatoeba API wrapper in Raku
   - https://github.com/Tatoeba/tatoeba2/issues/2669
+  - https://github.com/Tatoeba/tatoeba2/pull/3064
 - add tests
 	- to Roast
 	- https://github.com/doomvox/darkroast

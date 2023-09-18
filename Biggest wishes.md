@@ -18,13 +18,14 @@ Modules/Products:
 - the old ecosystem (and modules site) used to be a social place - let's try to keep the good parts
 	- https://github.com/Raku/ecosystem/blob/main/ADOPT-ME.md
 	- https://github.com/Raku/ecosystem-unbitrot
+		- confer [[Squashathon reborn]]
 	- let's try to reach out to authors
 
 LSP!
 - RakuNavigator by bscan: let's help him!
 - repurpose https://github.com/Raku/atom-language-perl6 as a general grammar repository
   - Github/Linguist tracks it
-  - maybe VSC also well, bscan++
+  - maybe VSC also will, bscan++
 
 Content and communication:
 - books
@@ -42,6 +43,7 @@ Content and communication:
 	- old site?
 		- Bootstrap update
 		- gradually moving from Perl can still be desirable
+			- https://github.com/Raku/raku.org/pull/184
 		- content could be taken from CIAvash
 	- universal content considerations
 		- better description of IRC
@@ -58,9 +60,9 @@ Content and communication:
 	- favor raku.land FOR NOW
 	- in the long run, migrate to Cro, inspiration can be taken from raku.land
 - docs.raku.org
-	- new site by Altai-man?
-		- the final call seems to be: similar look, Richard's Collection backend
+	- website based on Richard's Collection backend
 		- https://github.com/Raku/doc-website
+	- content maintained at https://github.com/Raku/doc
 	- known issues of keeping content up-to-date
 - the Weeklies are good - make them louder
 	- same for the weekly challenges
@@ -86,6 +88,7 @@ Language and implementation:
 		- still useful for documentation! loads of details
 	- Raku should not become Rakudo as-it-is
 	- "undefined behavior" is also undesirable imo
+	- Roast is not sufficient, better standard needed
 - 6.e is being discussed by RSC
 - up-to-date JVM and JS backend would be welcome
 - standalone executable would be welcome
