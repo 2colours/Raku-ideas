@@ -105,8 +105,21 @@
 		- release some modules with tightly coupled code -> perhaps there is no point in pretending that one only depends on the module when the rest of the dist could not be separated
 		- bundling modules for more convenient sharing -> it would make sense to actually allow independent metadata for the modules
 	- in any case - it doesn't seem reasonable to make dependencies a combo of module metadata (name) and dist metadata (auth, version, etc.)
-25. `token`s and capture groups
+25. **(OPENED)** `token`s and capture groups
 	- `my token inQuote { \' .*? \' }; say "'Hello World'" ~~ / <inQuote> /` matches
 	- `my token inQuote   {  \' <(.*?)> \' }; say "'Hello World'" ~~ / <inQuote> /` (mind the match delimeters) also matches
 	- `my token inQuote { \' (.*?) \' }; say "'Hello World'" ~~ / <inQuote> /` (mind the positional capture instead of the match delimeters) doesn't match!
 	- why? is this intended or a bug?
+26. `my Real() $demo = 'almafa'` throws, yet `'almafa' ~~ Real()` succeeds
+	- seems to work with a great variety of type checks, possibly all coercion types where the source type is okay
+	- given example bisects to https://github.com/rakudo/rakudo/commit/f2d73287f95ad6fa9eba8856ad15f3e8f9076d6e
+27. a `Pair` value cannot be bound to a positional in a subsignature
+	- `my $default = 12 => 34; my :($pair) := ($default,)` will fail: `Too few positionals passed to '<unit>'; expected 1 argument but got 0`
+	- succeeds with non-`Pairs`
+	- even binding the right handside to a `Slip` won't help
+ 	- possibly related to https://github.com/rakudo/rakudo/issues/4534
+28. `say: "d", 5` - why is that a `Label`?
+	- reading both https://docs.raku.org/language/control#LABELs and especially https://docs.raku.org/type/Label, it seems that `Label`s are only for loops
+ 	- yet the parsing shows that we created a perfect label for an expression
+  	- either the docs are wrong or this should be an error
+   	- should be easy to ban this in RakuAST
