@@ -1,0 +1,37 @@
+Did you know...
+- that there is a wholesome dependency manager called Pakku?
+- that somebody created blockchain integration, a test harness and a CMS?
+
+- disclaimer:
+	- completely subjective
+	- didn't negotiate or discuss with anyone
+- too many names
+	- good thing: the more the better :)
+	- bad thing: won't fit :(
+- Changes since the original idea
+	- Ben Davies / @Kaiepi
+		- didn't want to add (more on the implementor side)
+		- RIP :(
+	- Richard Hainsworth / @finanalyst
+		- did want to add
+		- now an RSC member 😎
+- David Warring / @dwarring
+	- my main inspiration for this talk
+	- PDF, CSS, XML...
+	- great documentation
+- Jonathan Stowe / @jonathanstowe
+	- a lot of modules (second only to @lizmat)
+	- including some essentials (Test::META, JSON::Class, etc.)
+	- -OFun enhanced (XML::Fast :D)
+- Alexey Melezhik / @melezhik
+	- a great variety of CI/automation tools
+	- prolific author and presenter
+	- created r3tool 🥺
+	- creator of Sparrowhub
+- Rawley Fowler / @rf
+	- creator of Humming-Bird
+	- inspiring by great feats in a short time
+- People at this conference:
+	- Anton Antonov / @antononcube
+	- Leon Timmermans / @leont
+	- Fernando Correa de Oliveira / @FCO

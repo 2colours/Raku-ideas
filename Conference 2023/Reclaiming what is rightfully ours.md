@@ -1,0 +1,117 @@
+## Renovation in Raku land
+
+### Ruminations
+- does Raku have
+	- books, other learning materials?
+	- state of art documentation
+	- profilers, debuggers?
+	- highlighters, LSP?
+	- a library for certain task (from parsers to native bindings and wrapping public API's)
+	- workflows to address certain known challenges?
+- common sentiments
+	- "Raku is a young language*"
+		- for how long? 🤔
+	- "It would be nice, if only somebody did it"
+- first offshoot: not enough contributors (?)
+	- Raku's design is mostly stable
+	- retention is not enough, need to attract new people
+	- getting people involved needs work
+		- visibility + the offer itself
+	- lowering the barrier of contribution
+		- knowledge sharing
+		- "architect": manager or hacker?
+- realisation: there is way more content than we make use of!
+	- "Raku is a young language *with a long history*"
+	- Raku does have something for pretty much  everything I listed up there
+	- there have even been unbitrot events...
+	- inspiring example in the present: the doc team
+		- unbreaking the site
+		- introducing new site design
+		- adding new content
+		- plans going forward
+- challenges and reactions
+	- needs to be maintainable
+		- for a long time
+		- with little resources
+	- choosing stable technology
+		- support (for the future as well)
+	- knowledge sharing
+		- one advantage of dogfooding
+			- others:
+				- getting more involved in creating and maintaining tools
+				- getting a "client" for another technology
+	- making use of automations (Travis, now Github Actions)
+- what I've been doing
+	- laid out some plans for
+		- modern squashathons
+		- a possible new workgroup (ET)
+	- HTML::Tag, HTML::Template, File::Temp
+	- raku.org project
+		- mowyw turned very obscure
+		- similar system: Template6
+			- a project in itself
+			- could still do better with knowledge sharing...
+		- I have a working prototype, needs more testing
+			- need to up my container knowledge
+	- modules.raku.org project
+		- I like it in theory
+			- community-owned
+				- Raku.land: passing ownership? Outsourcing an important service?
+			- community-oriented structure
+		- written in Perl 5 (Mojolicious)
+		- too far out of reach so far
+		- approached a couple of people with the idea
+	- Atom highlighter project
+		- important bit: Textmate highlighter grammar
+			- which I don't know 😅
+		- Github linguist uses it
+			- PCRE vs Oniguruma, fun times...
+		- decaffeination
+		- ad-hoc AWK-driven templating of CSON files
+		- now all in (somewhat) documented Raku Hashes
+		- output is JSON
+		- do we care about Atom itself? 🤔
+		- got me involved with Pulsar and ppm in particular
+			- interesting story on its own
+			- maintenance of Atom is a huge disappointment
+				- code more rotten than most of anything with Raku
+				- no consistency
+				- somewhat ad-hoc "spectests"
+			- great experience with the Pulsar devs
+			- learned a lot
+	- Half-hearted, pending attempts
+		- Ddt
+			- didn't get along with the previous maintainer
+			- feels like it should be mostly redone...
+		- SpitSH
+			- great idea
+			- overwhelming for me
+	- ecosystem housekeeping (mostly raku-community-modules)
+		- minor things
+			- improving CI and tests
+			- looking for simple issues
+			- reviewing and merging PR's
+			- detaching repos that were originally forks
+			- updating to best practices (`use v...`, Raku extensions)
+			- leveraging migration to the "zef ecosystem"
+		- could keep one person busy
+		- modules I can recall
+			- [Data-MessagePack](https://github.com/raku-community-modules/Data-MessagePack)
+			- [Benchmark](https://github.com/raku-community-modules/Benchmark)
+			- [File-Find](https://github.com/raku-community-modules/File-Find)
+			- [Net-LibIDN2](https://github.com/raku-community-modules/Net-LibIDN2)
+			- [DateTime-Format](https://github.com/raku-community-modules/DateTime-Format)
+			- [Web-Template](https://github.com/raku-community-modules/Web-Template)
+			- [XML](https://github.com/raku-community-modules/XML)
+			- [GlotIO](https://github.com/raku-community-modules/GlotIO)
+			- [CoreHackers-Sourcery](https://github.com/raku-community-modules/CoreHackers-Sourcery)
+			- [Pastebin-Shadowcat](https://github.com/raku-community-modules/Pastebin-Shadowcat)
+			- [CoreHackers-Q](https://github.com/raku-community-modules/CoreHackers-Q)
+- moral of the story
+	- there is always something you can do
+	- no need to be particularly competent at _anything_
+	- a little bit of attention can make a huge difference
+- "requests for comments"
+	- for modern squashathons https://github.com/2colours/Raku-ideas/blob/main/Squashathon%20reborn.md
+	- for an Editor & Tooling workgroup https://github.com/2colours/Raku-ideas/blob/main/Raku%20Editor%20and%20Tooling%20workgroup.md
+	- for the raku.org tooling https://github.com/Raku/raku.org/pull/184
