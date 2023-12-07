@@ -29,6 +29,7 @@
 		- introducing new site design
 		- adding new content
 		- plans going forward
+	- related project: CCR
 - challenges and reactions
 	- needs to be maintainable
 		- for a long time
@@ -41,6 +42,12 @@
 				- getting more involved in creating and maintaining tools
 				- getting a "client" for another technology
 	- making use of automations (Travis, now Github Actions)
+	- second offshoot: what is lasting?
+		- recurring problem: you have software nobody understands
+		- technology changes...
+		- ...much faster than simple, informal language
+		- the entry point is also much lower
+		- literate programming???
 - what I've been doing
 	- laid out some plans for
 		- modern squashathons
