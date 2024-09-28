@@ -1,0 +1,78 @@
+## The good parts
+- approach to textual content
+	- strings are NOT arrays of a predefined thing
+	- string length is an ambiguous concept
+	- character is outright a meaningless concept - no character type please, EVER
+- "last statement gives return value" is a decent idea
+	- in a semicolon language, I'd rather use the semicolon as a statement separator, therefore last semicolon would discard the value
+- `.=` syntax
+- `.&`
+	- maybe push towards UFCS?
+- regex
+	- new syntax and semantics should probably still remain in a "blessed" (semi-official) package
+- dedicated coercive operators and basically an open list of operators overall
+- topic variable
+  I wouldn't die for this feature but I think it can be done right and Raku mostly got it right
+- state variables
+- standard library
+	- snitch (also in Ruby, called tap)
+	- powerful, stateful mapping
+	- rich numeric system
+		- maybe wouldn't try to keep it in the standard library itself, more like "blessed" packages
+	- opt-out bigints
+- the concept of hypering
+- kebab-case
+	- I'd like to preserve this, with or without sigils
+	- wouldn't absolutely die for it though, if the tradeoff is too risky
+- multi-dispatch
+	- would like to save the concept, the execution was bad though
+- `unless` and similar redundant structures
+	- more good than bad but wouldn't die for them
+## The bad parts
+- inconsistency
+  This is not an explicit decision, more like deliberate ignorance about a virtue
+- dependency management
+	- the module vs distribution dichotomy is useless
+		- there is no point in bundling independent units of code at an ecosystem level
+		- there is also no point to pretend that interdependent units can be directly depended on
+	- metadata has to belong to the actual dependencies anyway
+		- metadata belonged to the distributions while dependencies where the modules - no-go
+- code sharing and import/export
+	- imports go to local scope with low control over what you need - no-go
+	- implicit definition of namespaces - no-go
+	- how to even resolve namespaces is worth considering (not too happy about the Python or Java way either)
+	- not much point to have both namespaces and separate exports, integrate them some way
+- monkey-patchable grammar
+	- makes the language virtually unparseable
+	- something akin to Ruby or Groovy is still better
+- feed operators, the way they worked
+	- bad precedence
+	- required subroutines only, as opposed to methods
+	- completely different semantics for arrays
+- allomorphs
+	- completely dead idea, a sabotage of LSP, basically the glorification of the diamond problem
+- rational denominators overflowing by default
+- management/meta-design problems
+	- versioning vs (essentially unversioned) Rakudo
+	- lack of proper, evaluable specification
+	- lack of grammar description in a comprehensible way
+		- you can't describe it? then maybe think about making it simpler anyway
+- overly packed grammar features
+	- like `[&&]` being ambiguous for reduction and an array of an anonymous function
+	- call syntaxes and whitespaces
+- much of OO
+	- implicitly swallowing named arguments in methods
+	- total lack of compatibility between subroutines and methods
+	- unability to even get a pointer to a method without reflection
+	- this whole syntax hack with the sigils replacing `self`
+- type objects as missing values
+## Mixed feelings
+- junctions
+	- is it worth having? maybe hypering makes it unnecessary?
+	- how does it affect code readability?
+- smartmatching
+	- the theory *might* work but only with some properly defined expected semantics
+- sigils
+	- not dogmatically against them but I feel they failed to add any value
+- Failures (as opposed to Errors)
+	- need to think more about it
