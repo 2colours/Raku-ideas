@@ -28,6 +28,9 @@
 	- would like to save the concept, the execution was bad though
 - `unless` and similar redundant structures
 	- more good than bad but wouldn't die for them
+- heredoc and various quotations
+	- most types, if not all
+	- I heard some of this can be tough: wouldn't die for them if it's getting out of hand
 ## The bad parts
 - inconsistency
   This is not an explicit decision, more like deliberate ignorance about a virtue
@@ -66,6 +69,12 @@
 	- unability to even get a pointer to a method without reflection
 	- this whole syntax hack with the sigils replacing `self`
 - type objects as missing values
+- Nil
+	- at least the way it works
+		- Failures are considered funny versions of Nil
+		- but Nil also resets variables to their default value, as pretty much the only way to achieve that
+		- it has totally random, weird coercion rules
+	- is it needed/useful anyway?
 ## Mixed feelings
 - junctions
 	- is it worth having? maybe hypering makes it unnecessary?
@@ -76,3 +85,6 @@
 	- not dogmatically against them but I feel they failed to add any value
 - Failures (as opposed to Errors)
 	- need to think more about it
+- autovivification
+	- sometimes it's convenient but is it worth it as a hard default?
+	- maybe a separate "script mode" and "program mode" would be good
