@@ -88,3 +88,5 @@
 - autovivification
 	- sometimes it's convenient but is it worth it as a hard default?
 	- maybe a separate "script mode" and "program mode" would be good
+ - some other OO parts
+ 	- visibility applied to instances rather than classes is peculiar but worth experimenting with
