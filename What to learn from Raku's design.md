@@ -79,6 +79,7 @@
 - junctions
 	- is it worth having? maybe hypering makes it unnecessary?
 	- how does it affect code readability?
+ 	- leaning towards *negative* now: obfuscated and confusing code when multiple quantors are involved
 - smartmatching
 	- the theory *might* work but only with some properly defined expected semantics
 - sigils
