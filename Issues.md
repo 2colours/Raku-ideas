@@ -50,6 +50,7 @@
 		- as the string `"Nil"` for strings
 		- as `(0, )` (???) for lists
 	- needs consistent semantics, possibly error
+ 	- **UPDATE**: without code snippets, I have no idea what I meant here, I cannot reproduce anything like this, even with older Rakudo versions
 14. `$<a b>` should behave like `$[0, 1]`
 15. **(OPENED)** Handling of non-breaking spaces when splitting to words
 	- https://docs.raku.org/language/traps#___top "using Set subroutines (...)" part
