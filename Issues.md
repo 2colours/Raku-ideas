@@ -72,7 +72,7 @@
 	 - a native `int` cannot be assigned using a string literal, even if that string literal contains an integer
 	 - a native `int` is perfectly content with a native `str` variable on the right handside: voluntaristic integer parsing will happen; even complete nonsense can give a 0 return value
 18. parsing of "unary `&`"
-	- `say &5` yields `(Any)` with RakuAST frontend and `Nil` with legacy frontend
+	- ~~`say &5` yields `(Any)` with RakuAST frontend and `Nil` with legacy frontend~~ seems to be fixed now
 	- `say &(5)` yields 5 for both, RakuAST frontend sees it as an item contextualizer
 19. `utf` buffers and `Stringy`
 	- `utf8` and the likes are `Stringy`
