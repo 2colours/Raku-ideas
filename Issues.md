@@ -119,6 +119,7 @@
 	- succeeds with non-`Pairs`
 	- even binding the right handside to a `Slip` won't help
  	- possibly related to https://github.com/rakudo/rakudo/issues/4534
+		- it actually shows, though, that literal `\()` Capture constructions know to be aware of positional pairs when something is clearly recognized as such
   	- assumed to be related: https://github.com/rakudo/rakudo/issues/5718
 28. `say: "d", 5` - why is that a `Label`?
 	- reading both https://docs.raku.org/language/control#LABELs and especially https://docs.raku.org/type/Label, it seems that `Label`s are only for loops
