@@ -126,6 +126,7 @@
  	- yet the parsing shows that we created a perfect label for an expression
   	- either the docs are wrong or this should be an error
    	- should be easy to ban this in RakuAST
-29. `use 6.e.PREVIEW; if 1..0 { say 'This shouldn't be True.' }` fires
+29. `use v6.e.PREVIEW; if 1..0 { say 'This shouldn't be True.' }` fires
 	- seems like `if` uses an opcode for coercion and that doesn't respect the setting
 	- mind you: `so 1..0` would have been `False`
+ 	- seems to work as per Rakudo 2025.12 - needs to be investigated if it's a real fix
