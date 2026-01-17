@@ -1,0 +1,46 @@
+## 2026-01-17
+- https://github.com/Raku/problem-solving/issues/93, https://github.com/Raku/problem-solving/issues/489
+  - not really my thing but worth treating in a group
+- https://github.com/Raku/problem-solving/issues/119
+  - raiph's comment:
+    - "hooks" is a good term here superficially
+    - probably worth some qualifier (eg. "invocation hooks")
+    - "hooks" are **unrelated** to "magic methods"
+      - "hooks" are about a certain purpose - adding/customizing behavior of a predefined process (eg. function invokation; phasers can also be considered some kind of hooks)
+      - "magic methods" are about an interface and/or means of implementation - _reserved_, method-looking functionality involving runtime metadata
+      - `WHAT`, `WHY` and `HOW` are **not** hooks at all
+      - eg. phasers are hooks that aren't magic methods
+- https://github.com/Raku/problem-solving/issues/147
+  - not really my topic
+  - Nigel Hamilton if he shows up
+  - site creators (finanalyst, librasteve)
+- https://github.com/Raku/problem-solving/issues/286
+  - original link is broken: `/community` is redirected, `/community/` (with the slash) is not
+  - agreed with Coke - no point for the redundancy
+    - crosslinks
+    - perlmongers, Perl conferences - probably totally pointless/misrepresented
+  - I kinda question whether the docs site even really needs a "community page" - linking to the raku.org community page should be more than enough
+- https://github.com/Raku/problem-solving/issues/337
+  - still think this is an important issue
+    - "what happens if you assign to the received value" is **very much** user-facing behavior, cannot call it an "implementation detail"
+    - needs long-term planning, strategy - being transparent is the first step
+  - probably involves Roast (at the very least)
+    - how to detect it there is a whole different topic
+  - could be addressed on 3 levels
+    - "dummy" trait
+      - where? can it be on the return metadata itself, or only the function declaration?
+    - POD/RakuDoc attached to the function declaration
+      - make sure it makes it to the docs
+    - "prose"
+      - comment in the sources is still better than nothing
+      - again, make sure it makes it to the docs
+- https://github.com/Raku/problem-solving/issues/499
+  - for eg. `deepmap` just saying that it returns an `Iterable` is not enough
+    - it specifically returns `List` for a `List`, `Array` for an `Array` etc.
+  - maybe there could be a `proto`/base class signature/description with `Iterable` but the specific candidates should stay more specific
+    - possibly even more specific than now
+    - this leads far: documentation strategy for overrides
+- https://github.com/Raku/problem-solving/issues/501
+  - not too interested personally; `unit` is a controversial feature
+  - perhaps this is the least important issue on the list
+  - this definitely requires assistance from implementors
