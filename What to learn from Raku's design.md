@@ -11,7 +11,7 @@
 - regex
 	- new syntax and semantics should probably still remain in a "blessed" (semi-official) package
 - dedicated coercive operators and basically an open list of operators overall
-- topic variable
+- topic variable  
   I wouldn't die for this feature but I think it can be done right and Raku mostly got it right
 - state variables
 - standard library
@@ -32,7 +32,7 @@
 	- most types, if not all
 	- I heard some of this can be tough: wouldn't die for them if it's getting out of hand
 ## The bad parts
-- inconsistency
+- inconsistency  
   This is not an explicit decision, more like deliberate ignorance about a virtue
 - dependency management
 	- the module vs distribution dichotomy is useless
@@ -91,3 +91,9 @@
 	- maybe a separate "script mode" and "program mode" would be good
  - some other OO parts
  	- visibility applied to instances rather than classes is peculiar but worth experimenting with
+- reduction-production
+	- letting the user handle the 0-element and 1-element case is nice but maybe overused
+ 		- makes sense for `T op T --> T` situations and therefore `[+]`, `[~]`, `[*]`
+   		- for a disposable custom function it can be inconvenient
+    - the typing is confused: the initial (and return) type is not necessarily same as the type of the iterative input
+    - perhaps would separate the case useful for these homogenous operators and the general/customizable case
