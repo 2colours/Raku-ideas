@@ -130,3 +130,13 @@
 	- seems like `if` uses an opcode for coercion and that doesn't respect the setting
 	- mind you: `so 1..0` would have been `False`
  	- seems to work as per Rakudo 2025.12 - needs to be investigated if it's a real fix
+30. reduce metaoperators in feed (==>) chains
+	- `(1, 2, 3) ==> [+]()` is equal to 3
+ 	- `(1, 2, 3) ==> [*]()` is 0
+  	- `() ==> [**]()` is 1
+   	- reason: empty-looking reductions in fact push an empty list (more technically: an `&infix:<,>` call with no arguments) to their argument list
+    	- RakuAST grammar: https://github.com/rakudo/rakudo/blob/b7a4e1a9eb89b2cb9f895f1e8f80247582ec7796/src/Raku/ast/term.rakumod#L498
+     	- old grammar: https://github.com/rakudo/rakudo/blob/b7a4e1a9eb89b2cb9f895f1e8f80247582ec7796/src/Perl6/Actions.nqp#L8379
+  	- since feed operators work by pushing arguments to the end of the calls they find, they push the LHS as a second list, therefore the results as described
+   		- RakuAST grammar: https://github.com/rakudo/rakudo/blob/b7a4e1a9eb89b2cb9f895f1e8f80247582ec7796/src/Raku/ast/expressions.rakumod#L855
+     	- old grammar: https://github.com/rakudo/rakudo/blob/b7a4e1a9eb89b2cb9f895f1e8f80247582ec7796/src/Perl6/Actions.nqp#L7584
