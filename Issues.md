@@ -8,7 +8,7 @@
 	1. why is it not detachable in the first place?
 	2. why does `'asd'  .comb.&dd` count as detached? Surely it couldn't be more attached to the `.comb` part?
 6. **(OPENED)** `zef --help` writes to stderr
-7. **(OPENED)** smartmatch to S/// _is_ useful and it _does_ work
+7. **(REJECTED)** smartmatch to S/// _is_ useful and it _does_ work
 	- exactly as `$foo ~~ /regex/` or `$foo ~~ m/regex/` would work
 		- sets the $/ match variable
 		- returns with the result of substitution
@@ -17,6 +17,7 @@
 	- alas, the current behavior is documented: https://docs.raku.org/language/regexes#Substitution -> I propose the adoption as well
 		- either deleting the note plain and simple
 		- or also adding that it works like `$foo ~~ /regex/`, setting $/
+  	- **UPDATE:** _I don't see any point ever resurrecting this issue, let's take a different route altogether_
 8. **(OPENED)** `sub demo(|c, :$name) { say c; say $name; }; demo(1);`
 	- "expected 1 positional but got 1" WTF?
 	- seems like it actually expects no positionals at all
@@ -38,6 +39,7 @@
 			- maybe referring to `&&` and `||` (short-circuiting) can help
 		- hard to implement?
 			- does it contribute to the Rakudo-as-Raku merger of implementation and specification?
+   - **UPDATE:** _this is (too) fundamental, not an "issue"; proposed [the documentation of the general phenomenon](https://github.com/Raku/doc/issues/4763)_
 12. `my Int &var` things:
 	- valid, designed concept backed up by `Callable[::T]` - need to be documented
 	- `Callable[::T]` itself needs to be documented: based on the declared return value of the Callable instance
@@ -50,7 +52,7 @@
 		- as the string `"Nil"` for strings
 		- as `(0, )` (???) for lists
 	- needs consistent semantics, possibly error
- 	- **UPDATE**: without code snippets, I have no idea what I meant here, I cannot reproduce anything like this, even with older Rakudo versions
+ 	- **UPDATE**: _without code snippets, I have no idea what I meant here, I cannot reproduce anything like this, even with older Rakudo versions_
 14. `$<a b>` should behave like `$[0, 1]`
 15. **(OPENED)** Handling of non-breaking spaces when splitting to words
 	- https://docs.raku.org/language/traps#___top "using Set subroutines (...)" part
@@ -140,3 +142,10 @@
   	- since feed operators work by pushing arguments to the end of the calls they find, they push the LHS as a second list, therefore the results as described
    		- RakuAST grammar: https://github.com/rakudo/rakudo/blob/b7a4e1a9eb89b2cb9f895f1e8f80247582ec7796/src/Raku/ast/expressions.rakumod#L855
      	- old grammar: https://github.com/rakudo/rakudo/blob/b7a4e1a9eb89b2cb9f895f1e8f80247582ec7796/src/Perl6/Actions.nqp#L7584
+31. `.is-lazy` can hang on a partially fetched, de-facto infinite `Seq`
+    - there actually [was an issue for that](https://github.com/rakudo/rakudo/issues/3380) but it got closed
+    - `.is-lazy` is about the iterator, whether it _knows about itself_ that it might be problematic to iterate (ie. infinite in most cases)
+    - `gather`/`take` produces iterators that aren't lazy by default - `.is-lazy` returns `False` at first
+    - after caching (caused by `.gist` in this case), `.is-lazy` starts to hang
+    	- it seems to fetch the whole thing for some reason
+     	- couldn't trace lizmat's explanation
