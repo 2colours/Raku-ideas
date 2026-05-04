@@ -50,3 +50,35 @@ Bonus: guesses of `<>` quotation:
 - `<i>` is a `Str`
 - `<0i>`, `<1i>` are `ComplexStr`s
 - `<0+0i>` etc. are `Complex`es
+
+# Junctions and the promise of "free dinner"
+
+```raku
+sub valid-ratio($dividend, $divisor) { 1 < $dividend / $divisor < 10 }
+so valid-ratio(any(10, 75, 4), all(2, 6, 7, 11)) # True ("for all $y there is an $x such as valid-ratio($x, $y)"), False wanted ("there is an $x such that for all $y, valid-ratio($x, $y)")
+```
+(god forbid further dimensions...)
+A way out:
+```raku
+sub (Any $x, Mu $y) { valid-ratio($x, $y) }(any(10, 75, 4), all(2, 6, 7, 11)).so # False - $x stays the outmost layer
+```
+There is nothing about composition either way.
+Funny negations:
+```raku
+my &strange = { $_ !%% 2 && $_ % 2 != 1 }
+strange(1) # False
+strange(2) # False
+strange(1&2) # True !
+
+my &composite-number = { !.&is-prime && $_ != 1 }
+composite-number(1|4) # False !
+composite-number(1&4) # True !
+
+my &demo333 = { $_ % 5 != (3|4) }
+demo333(4) # False
+demo333(1) # True
+demo333(1&4) # True !
+demo333(1|4) # False !
+```
+
+`sub` has `Any` as default parameter type, a code block (even a pointy block!) has `Mu` as default parameter type.
