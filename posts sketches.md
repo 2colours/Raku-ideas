@@ -81,4 +81,14 @@ demo333(1&4) # True !
 demo333(1|4) # False !
 ```
 
+Sometimes the mere presence of junctions can lead to results which are hard to comprehend:
+```raku
+# "find the first value which is between 0 and 10 and is even
+sub find-valid(@list) {
+  @list.first({ 0 < $_ < 10 && $_ %% 2 })
+}
+find-valid((1|222,)); # any(1, 222) - basically anything you do with this value will cause trouble
+```
+By the way, the "untyped" `Array` accepting junctions like it's nothing is an odd thing in and of itself...
+
 `sub` has `Any` as default parameter type, a code block (even a pointy block!) has `Mu` as default parameter type.
